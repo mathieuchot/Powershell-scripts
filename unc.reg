@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1]
+"file"=dword:00000002
+":Range"="192.168.0.32"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range2]
+"file"=dword:00000001
+":Range"="192.168.0.32"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\adfs.mathieuchot-plassot.com]
+"http"=dword:00000001
+"https"=dword:00000001
