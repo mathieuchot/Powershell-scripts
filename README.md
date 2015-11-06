@@ -1,2 +1,2 @@
 # Powershell-scripts
-Enssemble de scripts powershell que j'ai réalisé
+Ensemble de scripts powershell que j'ai réalisé
