@@ -136,7 +136,7 @@ else
     $correctif_x86 = "\\192.168.0.32\Packages\powershell3\correctif\Windows6.1-KB2842230-x86.msu"
     $utilisateur = "$env:username"
     $powershellpath = "C:\users\$utilisateur\powershell" 
-    $login = "imperium"
+    $login = "xxx"
     $_password = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("bWF0aGlldWNob3QtcGxhc3NvdC5jb20="))
     ####################################################################   
     # Creation du dossier local de logs si absent 
@@ -159,7 +159,7 @@ else
     # Creation d'un administrateur local 
     $Computer = [ADSI]"WinNT://$Env:COMPUTERNAME,Computer" 
     $colUsers = ($Computer.psbase.children | Where-Object {$_.psBase.schemaClassName -eq "User"} | Select-Object -expand Name)
-    $blnFound = $colUsers -contains "imperium"
+    $blnFound = $colUsers -contains "xxx"
     if ($blnFound)
     { 
         WriteLogFile "L utilisateur $login existe :)"
@@ -487,10 +487,10 @@ else
     #generer mot de passe 
 $Key = [byte]35,31,32,45,55,11,09,08,11,34,67,99,12,20,09,98      #utilisable sur n'importe quel machines 
 "monmotdepasse" | Convertto-SecureString -AsPlainText -Force | ConvertFrom-SecureString -key $key
-#resultat = 76492d1116743f0423413b16050a5345MgB8AEYAVQBvADMAZwBlAGoARQBVADQALwBMAGUATwBIAGYANgBTAEgAUQBhAEEAPQA9AHwAOQA0ADcAYQBhAGUANgBjADUAMQAwADgANAA4AGQANQA2ADQANQA2AGQAMQBkADAANwA4ADQAYgBhAGUAYgA3ADgAOABkADcAOQA5ADgANQBkADAAYwA3AGMAYwAyADEAZQA3ADEAMQA0ADMAOAAyADQAZABhAGMAZAAwADQAYQA=
+#resultat = xxx
 
 New-Object System.Management.Automation.Pscredential -Argumentlist $login,$password # dans un script pour executer en tant que sans prompt
-Start-Process powershell -Credential "imperium"    # test start en tant que imperium
+Start-Process powershell -Credential "xxx"    # test start en tant que xxx
 
 #>
 
